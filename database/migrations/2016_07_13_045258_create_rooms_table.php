@@ -19,6 +19,8 @@ class CreateRoomsTable extends Migration
             $table->float('tarifa');
             $table->integer('max_personas');
             $table->timestamps();
+            $table->softDeletes();
+
 
             $table->foreign('hotel_id')->references('id')->on('hotels');
         });

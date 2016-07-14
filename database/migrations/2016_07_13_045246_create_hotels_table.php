@@ -17,14 +17,16 @@ class CreateHotelsTable extends Migration
             $table->integer('user_id');
             $table->string('nombre');
             $table->string('tipo');
-            $table->datetime('fecha');
+            $table->date('fecha');
             $table->string('direccion');
             $table->string('estado');
             $table->string('pais');
             $table->string('postal');
             $table->timestamps();
+            $table->softDeletes();
 
-            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

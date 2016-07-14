@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('cedula');
-            $table->datetime('birthdate');
+            $table->date('birthdate');
             $table->rememberToken();
             $table->timestamps();
         });

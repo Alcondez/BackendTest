@@ -55,14 +55,12 @@
                         
     
        
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('birthdate') ? ' has-error' : '' }}">
                             <label for="birthdate" class="col-md-4 control-label">Fecha de Nacimiento</label>
 
-                            <div class='input-group date col-md-6' id='datetimepicker1'>
-                                <input type='text' class="form-control" name="birthdate" />
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                            <div class="col-md-6">
+                                <input id="birthdate" type="date" class="form-control" name="birthdate" value="{{ old('birthdate') }}">
+
                                 @if ($errors->has('birthdate'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('birthdate') }}</strong>

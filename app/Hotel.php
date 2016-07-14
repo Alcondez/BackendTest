@@ -3,12 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Hotel extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = [
-        'nombre', 'tipo', 'direccion','fecha','estado','pais','postal'
+        'nombre', 'tipo','user_id', 'direccion','fecha','estado','pais','postal'
     ];
+
+    protected $dates = ['deleted_at'];
 
     public function rooms()
     {
