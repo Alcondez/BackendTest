@@ -28,12 +28,14 @@ http://backenddev.herokuapp.com/
 
 Requerimientos:
 
-PHP >= 5.5.9
-OpenSSL PHP Extension
-PDO PHP Extension
-Mbstring PHP Extension
-Tokenizer PHP Extension
-
-Ejecutar por consola "php artisan serve" desde la raiz del projecto
+	PHP >= 5.5.9
+	OpenSSL PHP Extension
+	PDO PHP Extension
+	Mbstring PHP Extension
+	Tokenizer PHP Extension
 
 Ajustar las variables para la conexion a la base de datos en el archivo .env
+
+Ejecutar por consola "php artisan migrate" desde la raiz del projecto
+
+Ejecutar por consola "php artisan serve" desde la raiz del projecto
